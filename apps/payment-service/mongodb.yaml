@@ -2,7 +2,7 @@ apiVersion: mongodbcommunity.mongodb.com/v1
 kind: MongoDBCommunity
 metadata:
   name: payment-service-mongodb
-  namespace: payment-service
+  namespace: mongodb
   annotations:
     argocd.argoproj.io/sync-wave: "5"
 spec:

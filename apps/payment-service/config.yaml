@@ -5,7 +5,7 @@ metadata:
   namespace: payment-service
 data:
   EUREKA_ENABLED: "false"
-  KAFKA_BOOTSTRAP_SERVERS: "main-cluster-kafka-bootstrap.kafka.svc.cluster.local:9092"
+  KAFKA_BOOTSTRAP_SERVERS: "main-cluster-kafka-bootstrap.infrastructure:9092"
   MONGO_DATABASE: "paymentservice"
   MONGO_USERNAME: "payment-service"
   MONGO_HOST: "payment-service-mongodb:27017"

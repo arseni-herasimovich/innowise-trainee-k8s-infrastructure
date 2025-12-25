@@ -1,0 +1,25 @@
+apiVersion: mongodbcommunity.mongodb.com/v1
+kind: MongoDBCommunity
+metadata:
+  name: payment-service-mongodb
+  namespace: payment-service
+  annotations:
+    argocd.argoproj.io/sync-wave: "5"
+spec:
+  members: 1
+  type: ReplicaSet
+  security:
+    authentication:
+      modes:
+      - SCRAM
+  users:
+    - name: payment-service
+      db: admin
+      passwordSecretRef:
+        name: payment-service-secrets
+        key: MONGO_PASSWORD
+      roles:
+        - db: paymentservice
+          name: readWrite
+        - name: dbAdmin
+          db: paymentservice

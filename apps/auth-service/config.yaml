@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: auth-service-config
+  namespace: auth-service
+data:
+  EUREKA_ENABLED: "false"
+  DB_HOST: "auth-service-db-rw"
+  DB_PORT: "5432"
+  DB_NAME: "authservice"

@@ -10,7 +10,7 @@ spec:
   source:
     chart: community-operator
     repoURL: https://mongodb.github.io/helm-charts
-    targetRevision: 0.11.0
+    targetRevision: 0.10.0
     helm:
       parameters:
         - name: "operator.watchNamespace"

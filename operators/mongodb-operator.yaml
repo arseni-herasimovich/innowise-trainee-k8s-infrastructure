@@ -11,6 +11,10 @@ spec:
     chart: community-operator
     repoURL: https://mongodb.github.io/helm-charts
     targetRevision: 0.11.0
+    helm:
+      parameters:
+        - name: "operatorScope"
+          value: "cluster"
   destination:
     server: https://kubernetes.default.svc
     namespace: mongodb

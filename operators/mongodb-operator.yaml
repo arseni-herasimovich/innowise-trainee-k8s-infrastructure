@@ -13,6 +13,8 @@ spec:
     targetRevision: 0.11.0
     helm:
       parameters:
+        - name: "watchNamespace"
+          value: "*"
         - name: "operatorScope"
           value: "cluster"
   destination:

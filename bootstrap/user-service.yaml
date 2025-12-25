@@ -9,7 +9,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/arseni-herasimovich/innowise-trainee-k8s-infrastructure.git
-    targetRevision: HEAD
+    targetRevision: k8s-manifest
     path: apps/user-service
   destination:
     server: https://kubernetes.default.svc

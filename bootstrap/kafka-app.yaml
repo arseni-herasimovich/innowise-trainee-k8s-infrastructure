@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: cluster-infrastructure
+  name: cluster-kafka
   namespace: argocd
   annotations:
     argocd.argoproj.io/sync-wave: "5"
@@ -10,10 +10,10 @@ spec:
   source:
     repoURL: https://github.com/arseni-herasimovich/innowise-trainee-k8s-infrastructure.git
     targetRevision: k8s-manifest
-    path: infrastructure
+    path: kafka
   destination:
     server: https://kubernetes.default.svc
-    namespace: infrastructure
+    namespace: kafka
   syncPolicy:
     automated:
       prune: true

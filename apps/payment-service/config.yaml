@@ -11,3 +11,4 @@ data:
   MONGO_HOST: "payment-service-mongodb-svc:27017"
   KAFKA_AUTO_CREATE_TOPICS: "false"
   AUTH_SERVICE_URL: "http://auth-service.auth-service:80"
+  APP_LOGGING_LEVEL: "debug"

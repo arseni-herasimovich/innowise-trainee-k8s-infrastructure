@@ -11,3 +11,4 @@ data:
   PAYMENT_SERVICE_URL: "http://payment-service.payment-service:80"
   AUTH_GRPC_ADDR: "static://auth-service.auth-service:9090"
   USER_GRPC_ADDR: "static://user-service.user-service:9090"
+  APP_LOGGING_LEVEL: "debug"

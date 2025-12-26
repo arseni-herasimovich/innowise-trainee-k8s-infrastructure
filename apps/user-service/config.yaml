@@ -11,3 +11,4 @@ data:
   REDIS_HOST: "user-service-redis"
   REDIS_PORT: "6379"
   AUTH_SERVICE_URL: "http://auth-service.auth-service:80"
+  APP_LOGGING_LEVEL: "debug"

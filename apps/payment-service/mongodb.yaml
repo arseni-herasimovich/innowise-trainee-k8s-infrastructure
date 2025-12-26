@@ -18,6 +18,7 @@ spec:
       passwordSecretRef:
         name: payment-service-secrets
         key: MONGO_PASSWORD
+      scramCredentialsSecretName: payment-service
       roles:
         - db: paymentservice
           name: readWrite

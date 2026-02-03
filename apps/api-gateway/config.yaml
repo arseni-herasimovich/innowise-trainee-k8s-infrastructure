@@ -9,6 +9,6 @@ data:
   AUTH_SERVICE_URL: "http://auth-service.auth-service:80"
   ORDER_SERVICE_URL: "http://order-service.order-service:80"
   PAYMENT_SERVICE_URL: "http://payment-service.payment-service:80"
-  AUTH_GRPC_ADDR: "static://auth-service.auth-service:9090"
-  USER_GRPC_ADDR: "static://user-service.user-service:9090"
+  AUTH_GRPC_ADDR: "dns://auth-service.auth-service:9090"
+  USER_GRPC_ADDR: "dns://user-service.user-service:9090"
   APP_LOGGING_LEVEL: "debug"

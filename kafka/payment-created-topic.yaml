@@ -1,0 +1,13 @@
+apiVersion: kafka.strimzi.io/v1beta2
+kind: KafkaTopic
+metadata:
+  name: payment-created
+  annotations:
+    argocd.argoproj.io/sync-wave: "7"
+  labels:
+    strimzi.io/cluster: main-cluster
+  namespace: kafka
+spec:
+  topicName: PAYMENT_CREATED
+  partitions: 6
+  replicas: 3

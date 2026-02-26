@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: order-service-config
+  namespace: order-service
+data:
+  EUREKA_ENABLED: "false"
+  DB_HOST: "order-service-db-rw"
+  DB_PORT: "5432"
+  DB_NAME: "orderservice"
+  AUTH_SERVICE_URL: "http://auth-service.auth-service:80"
+  USER_SERVICE_URL: "http://user-service.user-service:80"
+  KAFKA_BOOTSTRAP_SERVERS: "main-cluster-kafka-bootstrap.kafka:9092"
+  KAFKA_AUTO_CREATE_TOPICS: "false"
+  APP_LOGGING_LEVEL: "debug"

@@ -1,0 +1,13 @@
+apiVersion: kafka.strimzi.io/v1beta2
+kind: KafkaTopic
+metadata:
+  name: order-created-dlt
+  annotations:
+    argocd.argoproj.io/sync-wave: "7"
+  labels:
+    strimzi.io/cluster: main-cluster
+  namespace: kafka
+spec:
+  topicName: ORDER_CREATED-dlt
+  partitions: 6
+  replicas: 3

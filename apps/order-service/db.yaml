@@ -1,0 +1,15 @@
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  name: order-service-db
+  namespace: order-service
+  annotations:
+    argocd.argoproj.io/sync-wave: "5"
+spec:
+  instances: 1
+  storage:
+    size: 1Gi
+  bootstrap:
+    initdb:
+      database: orderservice
+      owner: orderservice

@@ -12,6 +12,11 @@ spec:
     helm:
       values: |
         tempo:
+          server:
+            http_listen_port: 3100
+          querier:
+            frontend_worker:
+              frontend_address: 127.0.0.1:9095
           receivers:
             otlp:
               protocols:
@@ -19,6 +24,12 @@ spec:
                   endpoint: "0.0.0.0:4317"
                 http:
                   endpoint: "0.0.0.0:4318"
+        traces:
+          otlp:
+            grpc:
+              enabled: true
+            http:
+              enabled: true
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: observability

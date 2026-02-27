@@ -3,6 +3,8 @@ kind: Service
 metadata:
   name: payment-service
   namespace: payment-service
+  labels:
+    app: api-gateway
 spec:
   selector:
     app: payment-service

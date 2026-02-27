@@ -16,6 +16,8 @@ spec:
     metadata:
       labels:
         app: payment-service
+      annotations:
+        instrumentation.opentelemetry.io/inject-java: "true"
     spec:
       containers:
         - name: payment-service

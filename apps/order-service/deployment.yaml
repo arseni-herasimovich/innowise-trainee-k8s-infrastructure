@@ -16,6 +16,8 @@ spec:
     metadata:
       labels:
         app: order-service
+      annotations:
+        instrumentation.opentelemetry.io/inject-java: "true"
     spec:
       containers:
         - name: order-service

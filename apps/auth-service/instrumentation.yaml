@@ -1,0 +1,14 @@
+apiVersion: opentelemetry.io/v1alpha1
+kind: Instrumentation
+metadata:
+  name: auth-service-otel-config
+  namespace: auth-service
+spec:
+  exporter:
+    endpoint: http://tempo.observability.svc.cluster.local:4317
+  sampler:
+    type: always_on # parentbased_traceidratio in future
+  java:
+    env:
+      - name: OTEL_METRICS_EXPORTER
+        value: none

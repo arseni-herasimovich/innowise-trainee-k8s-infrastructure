@@ -4,7 +4,7 @@ metadata:
   name: auth-service
   namespace: auth-service
   labels:
-    app: api-gateway
+    app: auth-service
 spec:
   selector:
     app: auth-service

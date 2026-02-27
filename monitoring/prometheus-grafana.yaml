@@ -19,7 +19,7 @@ spec:
               access: proxy
             - name: Tempo
               type: tempo
-              url: http://tempo.observability.svc.cluster.local:3100
+              url: http://tempo.observability.svc.cluster.local:3200
               access: proxy
   destination:
     server: 'https://kubernetes.default.svc'
